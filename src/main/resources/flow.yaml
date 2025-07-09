@@ -1,0 +1,14 @@
+config:
+  server: localhost
+  port: 2324
+  protocol: TN5250
+  terminalType: 'IBM-3477-FC: 27x132'
+  sslType: None
+
+steps:
+  - actions:
+      - label: User
+        input: TESTUSR
+      - label: Password
+        input: TESTPSW
+    attentionKey: ENTER
