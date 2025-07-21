@@ -2,6 +2,14 @@
 
 This project implements a customizable MCP server to execute RTE protocol.
 
+## Example
+
+![demo](./docs/rte_claude.gif)
+
+![screen1](./docs/rte_screen_1.png)
+
+![screen2](./docs/rte_screen_2.png)
+
 ## Development
 
 ### Requirements
@@ -22,7 +30,7 @@ This project implements a customizable MCP server to execute RTE protocol.
     java -jar -Dspring.ai.mcp.server.stdio=true rte-mcp-server-0.0.1-SNAPSHOT.jar
     ```
 
-### RteUtils 
+### RteUtils
 
 The intention of this project is to be easily extensible. You can add your own MCP tools by
 using `RteUtils` class.
@@ -88,7 +96,7 @@ Any number the steps can be defined in the **yaml** file.
 * **terminalType:** The following table shows the supported terminal types for each protocol:
 
   | Protocol | Terminal Type         |
-  |----------|-----------------------|
+    |----------|-----------------------|
   | TN5250   | IBM-3477-FC: 27x132   |
   |          | IBM-3179-2: 24x80     |
   | TN3270   | IBM-3278-M2: 24x80    |
@@ -105,13 +113,13 @@ Any number the steps can be defined in the **yaml** file.
 * **steps:** A list of actions representing the steps to execute in the RTE server.
 * **actions:** All the actions to execute in the current screen, any number of pairs **label/input**
   could be added.
-    * **label:** The label of the field to fill in the RTE screen.
-    * **input:** The value to fill in the field.
-    * **attentionKey:** The key to press after filling the fields, it can be **ENTER**, **F1**,
-      **F2**, **F3**, **F4**, **F5**, **F6**, **F7**, **F8**, **F9**, **F10**, **F11**,
-      **F12**, **F13**, **F14**, **F15**, **F16**, **F17**, **F18**, **F19**, **F20**, **F21**,
-      **F22**, **F23**, **F24**, **ATTN**, **CLEAR**, **SYSRQ**, **RESET**, **ROLL_UP**,
-      **ROLL_DN**, **PA1**, **PA2** or **PA3**.
+  * **label:** The label of the field to fill in the RTE screen.
+  * **input:** The value to fill in the field.
+  * **attentionKey:** The key to press after filling the fields, it can be **ENTER**, **F1**,
+    **F2**, **F3**, **F4**, **F5**, **F6**, **F7**, **F8**, **F9**, **F10**, **F11**,
+    **F12**, **F13**, **F14**, **F15**, **F16**, **F17**, **F18**, **F19**, **F20**, **F21**,
+    **F22**, **F23**, **F24**, **ATTN**, **CLEAR**, **SYSRQ**, **RESET**, **ROLL_UP**,
+    **ROLL_DN**, **PA1**, **PA2** or **PA3**.
 
 ## Testing
 
